@@ -3,13 +3,30 @@ function convertCurrency() {
     const fromCurrency = document.getElementById("currencyFrom").value;
     const toCurrency = document.getElementById("currencyTo").value;
 
-    // Use the deployed API URL here
-    fetch(`https://your-app.herokuapp.com/convertCurrency?amount=${amount}&fromCurrency=${fromCurrency}&toCurrency=${toCurrency}`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("currencyResult").innerText = data;
-        })
-        .catch(err => {
-            document.getElementById("currencyResult").innerText = "Error fetching conversion.";
-        });
+    const conversionRates = {
+        USD: {
+            EUR: 0.85,
+            INR: 74.59,
+        },
+        EUR: {
+            USD: 1.18,
+            INR: 87.81,
+        },
+        INR: {
+            USD: 0.013,
+            EUR: 0.011,
+        }
+    };
+
+    // Check if the same currency is selected for both from and to
+    if (fromCurrency === toCurrency) {
+        document.getElementById("currencyResult").innerText = `Amount: ${amount} ${fromCurrency}`;
+        return;
+    }
+
+    // Perform the conversion
+    const convertedAmount = (amount * conversionRates[fromCurrency][toCurrency]).toFixed(2);
+
+    // Display the result
+    document.getElementById("currencyResult").innerText = `Converted amount: ${convertedAmount} ${toCurrency}`;
 }
