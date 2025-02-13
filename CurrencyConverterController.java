@@ -18,12 +18,13 @@ public class CurrencyConverterController {
     }
 
     private double convert(double amount, String fromCurrency, String toCurrency) {
+        // A simple example conversion, you can expand it later.
         if (fromCurrency.equals("USD") && toCurrency.equals("EUR")) {
-            return amount * 0.85;
+            return amount * 0.85; // Example exchange rate
         } else if (fromCurrency.equals("EUR") && toCurrency.equals("USD")) {
-            return amount * 1.18;
+            return amount * 1.18; // Example exchange rate
         } else {
-            return amount; // Default if no conversion is found
+            return amount; // No conversion available
         }
     }
 }
