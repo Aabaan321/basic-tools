@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Tools Website</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Basic Tools</h1>
-        <nav>
-            <ul>
-                <li><a href="#currency">Currency Converter</a></li>
-            </ul>
-        </nav>
+        <h1>Currency Converter</h1>
     </header>
+    
     <main>
         <section id="currency">
             <h2>Currency Converter</h2>
@@ -24,19 +20,23 @@
             <select id="currencyFrom">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
             </select>
             <label for="currencyTo">To:</label>
             <select id="currencyTo">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
             </select>
             <button onclick="convertCurrency()">Convert</button>
             <p id="currencyResult"></p>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Basic Tools Website</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
