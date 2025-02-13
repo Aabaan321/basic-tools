@@ -1,84 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #2d2d2d;
-    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    color: white;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
-.calculator-container {
+.calculator {
     background-color: #333;
-    border-radius: 20px;
-    width: 320px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 1.8em;
+#display {
+    width: 100%;
+    height: 50px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-#calculator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#calc-screen {
-    width: 100%;
-    padding: 15px;
-    font-size: 2em;
-    margin-bottom: 20px;
-    background-color: #222;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    text-align: right;
-}
-
-#calc-buttons {
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    width: 100%;
 }
 
 button {
-    padding: 20px;
-    font-size: 1.5em;
     background-color: #444;
-    border: none;
-    border-radius: 10px;
     color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #666;
+    background-color: #555;
 }
 
-button:active {
-    background-color: #888;
+.equals {
+    grid-column: span 2;
+    background-color: #f39c12;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #bbb;
+.equals:hover {
+    background-color: #e67e22;
 }
