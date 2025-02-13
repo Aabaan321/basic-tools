@@ -3,49 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Daily Tools</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Simple Daily Tools</h1>
-        <p>Helpful tools for your daily tasks</p>
+        <h1>Scientific Calculator</h1>
     </header>
 
-    <!-- Calculator Section -->
     <section id="calculator">
-        <h2>Calculator</h2>
         <input type="text" id="calc-screen" disabled>
         <div id="calc-buttons">
-            <button onclick="addToCalc(1)">1</button>
-            <button onclick="addToCalc(2)">2</button>
-            <button onclick="addToCalc(3)">3</button>
-            <button onclick="addToCalc(4)">4</button>
-            <button onclick="addToCalc(5)">5</button>
-            <button onclick="addToCalc(6)">6</button>
             <button onclick="addToCalc(7)">7</button>
             <button onclick="addToCalc(8)">8</button>
             <button onclick="addToCalc(9)">9</button>
+            <button onclick="addToCalc('/')">/</button>
+            <button onclick="addToCalc(4)">4</button>
+            <button onclick="addToCalc(5)">5</button>
+            <button onclick="addToCalc(6)">6</button>
+            <button onclick="addToCalc('*')">*</button>
+            <button onclick="addToCalc(1)">1</button>
+            <button onclick="addToCalc(2)">2</button>
+            <button onclick="addToCalc(3)">3</button>
+            <button onclick="addToCalc('-')">-</button>
             <button onclick="addToCalc(0)">0</button>
-            <button onclick="clearCalc()">C</button>
+            <button onclick="addToCalc('.')">.</button>
             <button onclick="calculate()">=</button>
             <button onclick="addToCalc('+')">+</button>
-            <button onclick="addToCalc('-')">-</button>
-            <button onclick="addToCalc('*')">*</button>
-            <button onclick="addToCalc('/')">/</button>
+            <button onclick="addToCalc('sqrt(')">√</button>
+            <button onclick="addToCalc('**')">^</button>
+            <button onclick="addToCalc('Math.sin(')">sin</button>
+            <button onclick="addToCalc('Math.cos(')">cos</button>
+            <button onclick="addToCalc('Math.tan(')">tan</button>
+            <button onclick="clearCalc()">C</button>
         </div>
     </section>
 
-    <!-- To-Do List Section -->
-    <section id="todo">
-        <h2>To-Do List</h2>
-        <input type="text" id="todo-input" placeholder="Add a task...">
-        <button onclick="addToDo()">Add Task</button>
-        <ul id="todo-list"></ul>
-    </section>
-
     <footer>
-        <p>&copy; 2025 Simple Daily Tools. All rights reserved.</p>
+        <p>&copy; 2025 Scientific Calculator. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
