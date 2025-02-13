@@ -1,17 +1,16 @@
-let calcScreen = document.getElementById('calc-screen');
-
-function addToCalc(value) {
-    calcScreen.value += value;
+function appendToDisplay(value) {
+    document.getElementById('display').value += value;
 }
 
-function clearCalc() {
-    calcScreen.value = '';
+function clearDisplay() {
+    document.getElementById('display').value = '';
 }
 
 function calculate() {
     try {
-        calcScreen.value = eval(calcScreen.value);
-    } catch (e) {
-        calcScreen.value = 'Error';
+        const result = eval(document.getElementById('display').value);
+        document.getElementById('display').value = result;
+    } catch (error) {
+        document.getElementById('display').value = 'Error';
     }
 }
