@@ -1,32 +1,31 @@
-function convertCurrency() {
-    const amount = document.getElementById("amount").value;
-    const fromCurrency = document.getElementById("currencyFrom").value;
-    const toCurrency = document.getElementById("currencyTo").value;
+// Calculator Functions
+let calcScreen = document.getElementById('calc-screen');
 
-    const conversionRates = {
-        USD: {
-            EUR: 0.85,
-            INR: 74.59,
-        },
-        EUR: {
-            USD: 1.18,
-            INR: 87.81,
-        },
-        INR: {
-            USD: 0.013,
-            EUR: 0.011,
-        }
-    };
+function addToCalc(value) {
+    calcScreen.value += value;
+}
 
-    // Check if the same currency is selected for both from and to
-    if (fromCurrency === toCurrency) {
-        document.getElementById("currencyResult").innerText = `Amount: ${amount} ${fromCurrency}`;
-        return;
+function clearCalc() {
+    calcScreen.value = '';
+}
+
+function calculate() {
+    try {
+        calcScreen.value = eval(calcScreen.value);
+    } catch (e) {
+        calcScreen.value = 'Error';
     }
+}
 
-    // Perform the conversion
-    const convertedAmount = (amount * conversionRates[fromCurrency][toCurrency]).toFixed(2);
+// To-Do List Functions
+let todoInput = document.getElementById('todo-input');
+let todoList = document.getElementById('todo-list');
 
-    // Display the result
-    document.getElementById("currencyResult").innerText = `Converted amount: ${convertedAmount} ${toCurrency}`;
+function addToDo() {
+    if (todoInput.value.trim() !== '') {
+        let li = document.createElement('li');
+        li.textContent = todoInput.value;
+        todoList.appendChild(li);
+        todoInput.value = ''; // clear input after adding task
+    }
 }
