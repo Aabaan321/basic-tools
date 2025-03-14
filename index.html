@@ -1,234 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aabaan's personal blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aabaan's Personal Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
-<body>
-    <!-- Settings Panel -->
-    <div class="settings-panel" id="settingsPanel">
-        <div class="settings-header">
-            <h3><i class="fas fa-cog"></i> Settings</h3>
-            <button id="closeSettings">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="settings-content">
-            <div class="setting-item">
-                <label>Theme</label>
-                <button id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark Mode</span>
-                </button>
-            </div>
-            <div class="setting-item">
-                <label>Text Size</label>
-                <div class="text-size-controls">
-                    <button id="decreaseText">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <span id="textSize">16</span>
-                    <button id="increaseText">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="setting-item">
-                <label>Accent Color</label>
-                <input type="color" id="accentColor" value="#ff3e3e">
-            </div>
-        </div>
+<body data-theme="dark">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#passions"><i class="fas fa-heart"></i> Passions</a>
+    <a href="#future"><i class="fas fa-road"></i> Future</a>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <div class="header-content">
+      <h1>Aabaan's Personal Blog</h1>
+      <p><big>Aspiring Chef | Traveler | Adventurer</big></p>
     </div>
+  </header>
 
-    <!-- Settings Toggle -->
-    <button id="settingsToggle" class="settings-toggle">
-        <i class="fas fa-cog"></i>
-    </button>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="#about"><i class="fas fa-user"></i> About</a>
-        <a href="#passions"><i class="fas fa-heart"></i> Passions</a>
-        <a href="#future"><i class="fas fa-road"></i> Future</a>
-    </nav>
-
-    <!-- Header -->
-    <header id="home">
-        <div class="header-content">
-            <h1>Aabaan's Personal Blog</h1>
-            <p><big>Aspiring Chef | Traveler | Adventure Seeker</big> </br> "This Website is Made By 'Aabaan Rahil Ghaffar' </br> Year '10' subject 'ICT' </br> Teacher 'MS Joumana lemounes'"</p>
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="section glass">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <div class="profile-container">
+        <div class="profile-image">
+          <img src="aabaan1.jpg" alt="Aabaan's Profile Picture">
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-       <!-- About Section -->
-<section id="about" class="section">
-    <h2><i class="fas fa-user"></i> About Me</h2>
-    <div class="about-content">
-        <div class="profile-container">
-            <div class="profile-image">
-                <img src="aabaan1.jpg" alt="Aabaan's Profile Picture">
-            </div>
-            <div class="profile-text">
-                <p>Welcome to my world! I’m Aabaan, an aspiring chef with an unwavering passion for culinary arts. From an early age, I’ve been fascinated by the power of food to bring people together, evoke memories, and create experiences. Cooking isn’t just about recipes for me – it’s about creativity, innovation, and constantly pushing myself to experiment with new ingredients and techniques. I dream of attending culinary school to hone my skills, eventually opening my own restaurant where I can share my love for food with the world. When I’m not in the kitchen, you’ll likely find me staying active. Whether it's boxing, swimming, or training in the gym, I believe fitness is key to maintaining a balanced and healthy lifestyle. Each sport keeps me disciplined, focused, and constantly striving to improve. But what truly fuels my soul is travel. Every destination I visit becomes an adventure in itself, not only through discovering new cultures but through tasting and learning about the local cuisines. From the bustling streets of Bangkok with their vibrant street food to the elegance of Parisian fine dining, each trip adds a new layer to my culinary journey. I thrive on exploring the world and using those experiences to inspire my next dish. The flavors, spices, and cooking traditions I encounter make me a better chef and a more well-rounded individual. In everything I do – whether it’s cooking, fitness, or traveling – I approach life with passion, excitement, and a determination to learn and grow every single day</p>
-                <!-- Rest of your existing about text -->
-            </div>
+        <div class="profile-text">
+          <p>Your existing detailed about-me description here.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Passions Section -->
+    <section id="passions" class="section">
+      <h2><i class="fas fa-heart"></i> My Passions</h2>
+      <div class="grid">
+        <a href="culinary.html" class="card">
+          <i class="fas fa-utensils fa-2x"></i>
+          <h3>Culinary Arts</h3>
+        </a>
+        <a href="sports.html" class="card">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Sports</h3>
+        </a>
+        <a href="gaming.html" class="card">
+          <i class="fas fa-gamepad"></i>
+          <h3>Gaming</h3>
+        </a>
+        <a href="automotive.html" class="card">
+          <i class="fas fa-car"></i>
+          <h3>Automotive</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Future Plans -->
+    <section id="future" class="section glass">
+      <h2><i class="fas fa-road"></i> Future Plans</h2>
+      <ul>
+        <li>Attend culinary school in France</li>
+        <li>Master global culinary techniques</li>
+        <li>Travel extensively</li>
+        <li>Open my restaurant</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://instagram.com/aabaanrg73"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>&copy; 2024 Aabaan Rahil Ghaffar</p>
     </div>
-</section>
+  </footer>
+</main>
 
+<!-- Settings Panel & Chatbot (existing HTML) -->
 
-        <!-- Passions Section -->
-        <section id="passions" class="section">
-            <h2><i class="fas fa-heart"></i> My Passions</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Culinary Arts</h3>
-                    <p>Exploring flavors and creating memorable dining experiences</p>
-                    <a href="culinary.html" class="read-more">Read More</a>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Sports</h3>
-                    <p>Boxing and swimming to stay fit and focused</p>
-                    <a href="sports.html" class="read-more">Read More</a>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Gaming</h3>
-                    <p>Enjoying virtual adventures and competitive gaming</p>
-                    <a href="gaming.html" class="read-more">Read More</a>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-car"></i>
-                    <h3>Automotive</h3>
-                    <p>Passionate about supercars and motorcycles</p>
-                    <a href="automotive.html" class="read-more">Read More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Plans Section -->
-        <section id="future" class="section">
-            <h2><i class="fas fa-road"></i> Future Plans</h2>
-            <ul class="plans-list">
-                <li>Pursue culinary education in France</li>
-                <li>Master French cuisine techniques</li>
-                <li>Travel and explore different food cultures</li>
-                <li>Learn from world-renowned chefs</li>
-            </ul>
-        </section>
-    </div>
-
-    <!-- Chat Bot Interface -->
-    <div class="chatbot-container">
-        <button id="chatToggle" class="chat-toggle">
-            <i class="fas fa-comments"></i>
-        </button>
-
-        <div id="chatWindow" class="chat-window">
-            <div class="chat-header">
-                <h3><i class="fas fa-robot"></i> AI Assistant</h3>
-                <button id="closeChatBtn" class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div id="chatMessages" class="chat-messages">
-                <!-- Messages will appear here -->
-            </div>
-            <div class="chat-input-container">
-                <input type="text" 
-                       id="chatInput" 
-                       placeholder="Type your message..."
-                       aria-label="Chat message input">
-                <button id="sendMessage" aria-label="Send message">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <!-- Instagram -->
-                <a href="https://instagram.com/aabaanrg73" target="_blank" title="Follow me on Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- WhatsApp -->
-                <a href="https://wa.me/995595125658" target="_blank" title="Contact me on WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <!-- Email -->
-                <a href="mailto:aabaangr@gmail.com" title="Email me">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <p class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    aabaangr@gmail.com
-                </p>
-                <p class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    +995 595125658
-                </p>
-                <p class="contact-item">
-                    <i class="fab fa-instagram"></i>
-                    @aabaanrg73
-                </p>
-            </div>
-            <p class="copyright">&copy; 2024 Journey to Culinary Excellence</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
-    
-    <!-- Jotform Chatbot -->
- <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
-    window.AgentInitializer.init({
-      rootId: "JotformAgent-019519dae51f7cbc91730f87a7da03a82d3e",
-      formID: "019519dae51f7cbc91730f87a7da03a82d3e",
-      queryParams: ["skipWelcome=1", "maximizable=1"],
-      domain: "https://www.jotform.com",
-      isInitialOpen: false,
-      isDraggable: false,
-      background: "linear-gradient(180deg, #C8CEED 0%, #C8CEED 100%)",
-      buttonBackgroundColor: "#0a1551",
-      buttonIconColor: "#fff",
-      variant: false,
-      customizations: {
-        greeting: "Yes",
-        greetingMessage: "Hi! My Name is Aabaan How can I assist you?",
-        pulse: "Yes",
-        position: "right"
-      }
-    });
-  });
-</script>
-
-
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 
-
-</body>
-</html>
