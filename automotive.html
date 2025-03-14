@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Passion | Supercars & Bikes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/supercar-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .vehicle-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .vehicle-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .vehicle-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover .vehicle-image {
+            transform: scale(1.05);
+        }
+
+        .vehicle-specs {
+            padding: 1.5rem;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 200px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .timeline-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#supercars"><i class="fas fa-car-side"></i> Supercars</a>
+        <a href="#motorcycles"><i class="fas fa-motorcycle"></i> Motorcycles</a>
+        <a href="#events"><i class="fas fa-flag-checkered"></i> Events</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Automotive Passion</h1>
+            <p>Exploring the World of Supercars & Motorcycles</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="supercars" class="section">
+            <h2><i class="fas fa-car-side"></i> Dream Supercars</h2>
+            <div class="vehicle-showcase">
+                <article class="vehicle-card">
+                    <img src="https://dmc.ag/wp-content/uploads/2019/07/CSM_3881-scaled.jpg" alt="Lamborghini Aventador" class="vehicle-image">
+                    <div class="vehicle-specs">
+                        <h3>Lamborghini Aventador SVJ</h3>
+                        <div class="spec-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>770 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>0-60: 2.8s</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gauge-high"></i>
+                                <span>217 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-engine"></i>
+                                <span>V12 Engine</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehicle-card">
+                    <img src="https://www.motortrend.com/uploads/2023/11/014-2024-ferrari-sf90-xx-stradale.jpg" alt="Ferrari SF90" class="vehicle-image">
+                    <div class="vehicle-specs">
+                        <h3>Ferrari SF90 Stradale</h3>
+                        <div class="spec-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>986 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>0-60: 2.5s</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gauge-high"></i>
+                                <span>211 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-plug"></i>
+                                <span>Hybrid</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="motorcycles" class="section">
+            <h2><i class="fas fa-motorcycle"></i> Dream Bikes</h2>
+            <div class="vehicle-showcase">
+                <article class="vehicle-card">
+                    <img src="https://preview.redd.it/new-2025-panigale-v4-s-v0-fffqq4z46qed1.jpeg?width=1080&crop=smart&auto=webp&s=5ef19cd9a47193a50ee89bf3da1f787cc5ba9311" alt="Ducati Panigale" class="vehicle-image">
+                    <div class="vehicle-specs">
+                        <h3>Ducati Panigale V4</h3>
+                        <div class="spec-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>214 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-weight-hanging"></i>
+                                <span>175 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gauge-high"></i>
+                                <span>186 mph</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehicle-card">
+                    <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/95229/left-side-view.jpeg?q=100" alt="BMW S1000RR" class="vehicle-image">
+                    <div class="vehicle-specs">
+                        <h3>Kawasaki Ninja H2R</h3>
+                        <div class="spec-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>310 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-weight-hanging"></i>
+                                <span>216 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gauge-high"></i>
+                                <span>240 mph</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="events" class="section">
+            <h2><i class="fas fa-flag-checkered"></i> Automotive Events</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Monaco Grand Prix</h3>
+                    <p>Dream event to witness the pinnacle of motorsport</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Goodwood Festival of Speed</h3>
+                    <p>Annual gathering of historic and modern performance vehicles</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Isle of Man TT</h3>
+                    <p>Legendary motorcycle road racing event</p>
+                </div>
+            </div>
+        </section>
+
+     <section id="gallery" class="section">
+    <h2><i class="fas fa-camera"></i> Automotive Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="placeholder.jpg" alt="Coming Soon">
+            <p class="image-caption">Image Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder.jpg" alt="Coming Soon">
+            <p class="image-caption">Image Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder.jpg" alt="Coming Soon">
+            <p class="image-caption">Image Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder.jpg" alt="Coming Soon">
+            <p class="image-caption">Image Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder.jpg" alt="Coming Soon">
+            <p class="image-caption">Image Coming Soon</p>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+    <a href="https://www.instagram.com/aabaanrg73"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+            <p>&copy; 2024 Automotive Journey</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

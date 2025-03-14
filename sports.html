@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Journey | Boxing & Swimming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/boxing-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .sport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .training-schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .schedule-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .achievement-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#boxing"><i class="fas fa-boxing-glove"></i> Boxing</a>
+        <a href="#swimming"><i class="fas fa-swimming-pool"></i> Swimming</a>
+        <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>My Sports Journey</h1>
+            <p>Boxing & Swimming: The Perfect Balance</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="boxing" class="section">
+            <h2><i class="fas fa-boxing-glove"></i> Boxing Journey</h2>
+            <div class="sport-grid">
+                <div class="sport-card">
+                    <img src="images/boxing-training.jpg" alt="Boxing Training" class="sport-image">
+                    <div class="sport-content">
+                        <h3>Training Regime</h3>
+                        <ul>
+                            <li>Shadow Boxing</li>
+                            <li>Heavy Bag Work</li>
+                            <li>Speed Bag Training</li>
+                            <li>Sparring Sessions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sport-card">
+                    <h3>Weekly Schedule</h3>
+                    <div class="training-schedule">
+                        <div class="schedule-card">
+                            <h4>Monday</h4>
+                            <p>Technical Training</p>
+                        </div>
+                        <div class="schedule-card">
+                            <h4>Wednesday</h4>
+                            <p>Sparring</p>
+                        </div>
+                        <div class="schedule-card">
+                            <h4>Friday</h4>
+                            <p>Conditioning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="swimming" class="section">
+            <h2><i class="fas fa-swimming-pool"></i> Swimming Excellence</h2>
+            <div class="sport-grid">
+                <div class="sport-card">
+                    <img src="images/swimming-training.jpg" alt="Swimming Training" class="sport-image">
+                    <div class="sport-content">
+                        <h3>Swimming Styles</h3>
+                        <ul>
+                            <li>Freestyle</li>
+                            <li>underwater</li>
+                            <li>frogstyle</li>
+                            <li>Backstroke</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sport-card">
+                    <h3>Pool Schedule</h3>
+                    <div class="training-schedule">
+                        <div class="schedule-card">
+                            <h4>Tuesday</h4>
+                            <p>Distance Training</p>
+                        </div>
+                        <div class="schedule-card">
+                            <h4>Thursday</h4>
+                            <p>Sprint Work</p>
+                        </div>
+                        <div class="schedule-card">
+                            <h4>Saturday</h4>
+                            <p>Technique Focus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <h2><i class="fas fa-trophy"></i> Sports Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <i class="fas fa-medal achievement-icon"></i>
+                    <div class="achievement-content">
+                        <h3>Local Boxing Tournament</h3>
+                        <p>Runner-up in Lightweight Division</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-trophy achievement-icon"></i>
+                    <div class="achievement-content">
+                        <h3>Regional Swimming Meet</h3>
+                        <p>Gold Medal in 100m Freestyle</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2><i class="fas fa-camera"></i> Sports Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Add your sports images here -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+          <div class="social-links">
+    <a href="https://www.instagram.com/aabaanrg73"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+            <p>&copy; 2024 Sports Journey</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

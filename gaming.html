@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Passion | Virtual Adventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/gaming-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(transparent, var(--bg-primary));
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .game-content {
+            padding: 1.5rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievement-item {
+            background: var(--card-bg);
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .platform-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+
+        .platform-icons i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .game-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .game-link:hover {
+            background: var(--accent-color-dark);
+        }
+
+        .recommended {
+            border: 2px solid var(--accent-color);
+        }
+
+        .recommended-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#favorite-games"><i class="fas fa-gamepad"></i> Games</a>
+        <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+        <a href="#streaming"><i class="fas fa-video"></i> Streaming</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Gaming Universe</h1>
+            <p>Adventures in Virtual Worlds</p>
+            <div class="platform-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fab fa-xbox"></i>
+                <i class="fab fa-steam"></i>
+                <i class="fas fa-desktop"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="my-games" class="section">
+            <h2><i class="fas fa-gamepad"></i> My Games</h2>
+            <div class="game-grid">
+                <article class="game-card">
+                    <div class="game-content">
+                        <h3>Game 1</h3>
+                        <a href="https://aabaan321.github.io/games/" class="game-link">Play Game</a>
+                    </div>
+                </article>
+                
+                <article class="game-card">
+                    <div class="game-content">
+                        <h3>Game 2</h3>
+                        <a href="https://aabaan321.github.io/game2/" class="game-link">Play Game</a>
+                    </div>
+                </article>
+                
+                <article class="game-card recommended">
+                    <div class="game-content">
+                        <h3>Game 3 <span class="recommended-badge">Recommended</span></h3>
+                        <a href="https://aabaan321.github.io/game3/" class="game-link">Play Game</a>
+                    </div>
+                </article>
+                
+                <article class="game-card">
+                    <div class="game-content">
+                        <h3>Game 4</h3>
+                        <a href="https://aabaan321.github.io/game4/" class="game-link">Play Game</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="favorite-games" class="section">
+            <h2><i class="fas fa-star"></i> Favorite Games</h2>
+            <div class="game-grid">
+                <article class="game-card">
+                    <img src="https://gpstatic.com/acache/69/62/2/uk/t620x300-94aa5845998c95755f19d5a96b5c5846.jpg" alt="Game 1" class="game-image">
+                    <div class="game-content">
+                        <h3>god of War ragnarock</h3>
+                        <p>God of War: Ragnarök is an action-adventure game and the sequel to God of War (2018). Developed by Santa Monica Studio, it continues the journey of Kratos and his son Atreus as they navigate the prophecy of Ragnarök—the end of the Norse world. The game expands on the brutal yet strategic combat system, introducing new weapons, abilities, and enemies from Norse mythology.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 103 hours</span>
+                            <span><i class="fas fa-trophy"></i> 100% complete</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="https://cdn.fastly.steamstatic.com/steam/apps/42700/header.jpg" alt="Game 2" class="game-image">
+                    <div class="game-content">
+                        <h3>call of duty</h3>
+                        <p>Call of Duty is a legendary first-person shooter franchise known for its intense gameplay, cinematic storytelling, and multiplayer action.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 350+ hours</span>
+                            <span><i class="fas fa-trophy"></i> Division 1</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="https://i0.wp.com/nodekeys.com/wp-content/uploads/2023/01/wtch.png?fit=871%2C872&ssl=1" alt="Game 3" class="game-image">
+                    <div class="game-content">
+                        <h3>The Witcher 3</h3>
+                        <p>The Witcher 3: Wild Hunt is an open-world action RPG developed by CD Projekt Red, based on the fantasy novels by Andrzej Sapkowski.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 300+ hours</span>
+                            <span><i class="fas fa-crosshairs"></i> 100+ Wins</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="gaming-setup" class="section">
+            <h2><i class="fas fa-desktop"></i> Gaming Setup</h2>
+            <div class="setup-details">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <i class="fas fa-microchip"></i>
+                        <h3>PC Specs</h3>
+                        <p>RTX 3080</p>
+                        <p>Ryzen 9 5900X</p>
+                        <p>32GB RAM</p>
+                        <p>1TB NVMe SSD</p>
+                        <p>2TB HDD</p>
+                        <p>NZXT Kraken Z73 AIO Liquid Cooler</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-tv"></i>
+                        <h3>Display</h3>
+                        <p>27" 4K Monitor</p>
+                        <p>144Hz Refresh Rate</p>
+                        <p>IPS Panel</p>
+                        <p>HDR Support</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-headset"></i>
+                        <h3>Peripherals</h3>
+                        <p>Mechanical Keyboard</p>
+                        <p>Wireless Gaming Mouse</p>
+                        <p>SteelSeries Arctis Pro Wireless Headset</p>
+                        <p>Logitech G Pro X Superlight Mouse</p>
+                        <p>SteelSeries QcK Heavy Mousepad</p>
+                        <p>Shure SM7B Microphone</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <h2><i class="fas fa-trophy"></i> Gaming Achievements</h2>
+            <ul class="achievement-list">
+                <li class="achievement-item">
+                    <i class="fas fa-crown"></i>
+                    <div>
+                        <h3>Tournament Victory</h3>
+                        <p>First place in call of duty tournament</p>
+                    </div>
+                </li>
+                <li class="achievement-item">
+                    <i class="fas fa-medal"></i>
+                    <div>
+                        <h3>Platinum Trophy</h3>
+                        <p>100% god of war</p>
+                    </div>
+                </li>
+                <li class="achievement-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h3>Global Ranking</h3>
+                        <p>Top 25% in Warzone players</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="streaming" class="section">
+            <h2><i class="fas fa-video"></i> Streaming Channel</h2>
+            <div class="streaming-content">
+                <div class="stream-schedule">
+                    <h3>Stream Schedule</h3>
+                    <ul>
+                        <li>in the future</li>
+                        <li>in the future</li>
+                        <li>in the future</li>
+                        <li>in the future</li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aabaanrg73"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/aabaanrg73"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 Gaming Journey</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

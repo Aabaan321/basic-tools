@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Journey | My Passion for Cooking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/culinary-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .recipe-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            position: relative;
+            margin: 2rem 0;
+            background: var(--card-bg);
+            border-radius: 15px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Settings Panel (same as main page) -->
+    <!-- Include the settings panel code here -->
+
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About Culinary</a>
+        <a href="#recipes"><i class="fas fa-book"></i> Recipes</a>
+        <a href="#journey"><i class="fas fa-road"></i> My Journey</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>My Culinary Journey</h1>
+            <p>Exploring the Art of Cuisine all over the world</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2><i class="fas fa-utensils"></i> About My Culinary Passion</h2>
+            <p>Cooking is more than just a skill for me—it’s a true passion. I love experimenting with flavors and techniques from around the world, blending ingredients to create unique and delicious dishes. Traveling has been a huge inspiration for me, from savoring street food in Bangkok to experiencing fine dining in Paris. Every new place I visit adds to my culinary knowledge, helping me refine my skills and discover new tastes.
+
+After completing the Cambridge curriculum, I plan to attend culinary school for a 4-year course in culinary arts and hotel management. My dream is to master the art of cooking and bring my creativity to the kitchen, whether in a fine-dining restaurant or my own establishment in the future.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>9+ Years</h3>
+                    <p>Cooking Experience</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>9+</h3>
+                    <p>Recipes Mastered</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award"></i>
+                    <h3>1</h3>
+                    <p>Cooking Certificates</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes" class="section">
+            <h2><i class="fas fa-book"></i> Favorite Recipes</h2>
+            <div class="recipe-grid">
+                <article class="recipe-card">
+                    <img src="https://hellskitchenrecipes.com/wp-content/uploads/2020/10/Gordon-Ramsays-Guide-to-Perfect-Beef-Wellington.jpg" alt="waiting for the img to lode" class="recipe-image">
+                    <div class="recipe-content">
+                        <h3>Beef Wellingto</h3>
+                        <p>Beef Wellington is one of my favorite dishes, a true test of skill and precision in the kitchen. The combination of tender beef, rich mushroom duxelles, and flaky puff pastry creates a perfect harmony of flavors and textures. I was inspired to perfect this dish by Gordon Ramsay, my favorite chef, whose passion for culinary excellence pushes me to refine my techniques. Mastering Beef Wellington has deepened my appreciation for classic cooking methods and the importance of attention to detail in every step of the process.</p>
+                        <button class="view-recipe">View Recipe- secret </button>
+                    </div>
+                </article>
+                <article class="recipe-card">
+                    <img src="https://ohsnapmacros.com/wp-content/uploads/2021/11/0019-BlackenedChicken-Hero-scaled.jpg" alt="Chicken Alfredo" class="recipe-image">
+                    <div class="recipe-content">
+                        <h3>Chicken Alfredo</h3>
+                        <p>Chicken Alfredo is a rich and creamy pasta dish that perfectly balances flavour and texture. Made with tender pieces of chicken, fettuccine pasta, and a velvety Alfredo sauce crafted from butter, cream, and Parmesan cheese, it’s a comforting yet indulgent meal. The sauce coats the pasta beautifully, creating a smooth, cheesy, and satisfying bite every time. This dish is a classic in Italian-American cuisine, known for its simplicity and elegance. Whether enjoyed as a homemade comfort meal or at a fine dining restaurant, Chicken Alfredo is a timeless favorite that never fails to impress.</p>
+                        <button class="view-recipe">View Recipe- secret </button>
+                    </div>
+                </article>
+                <article class="recipe-card">
+                    <img src="https://www.jocooks.com/wp-content/uploads/2024/02/panna-cotta-1-22.jpg" alt="Ratatouille" class="recipe-image">
+                    <div class="recipe-content">
+                        <h3>Panna Cotta</h3>
+                        <p>Panna Cotta is a delicate and creamy Italian dessert that is both simple and elegant. Made from sweetened cream, gelatin, and vanilla, it has a silky-smooth texture that melts in the mouth. Often served with a fruit coulis, caramel, or chocolate sauce, Panna Cotta offers a perfect balance of richness and lightness. Its subtle sweetness and luxurious feel make it a favorite in fine dining and home kitchens alike. This dessert showcases the beauty of minimal ingredients coming together to create something truly special.</p>
+                        <button class="view-recipe">View Recipe</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="journey" class="section">
+            <h2><i class="fas fa-road"></i> My Culinary Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2025</h3>
+                    <p>Started joining courses </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2026</h3>
+                    <p>Completed multiple cooking certification</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2027</h3>
+                    <p>Worked in a good restaurant to gain experience</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2028</h3>
+                    <p>Preparing for culinary school in France</p>
+                </div>
+            </div>
+        </section>
+<section id="gallery" class="section">
+    <h2><i class="fas fa-camera"></i> Food Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="food-placeholder-1.jpg" alt="Delicious Dish">
+            <p class="image-caption">Delicious Dish Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="food-placeholder-2.jpg" alt="Tasty Meal">
+            <p class="image-caption">Tasty Meal Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="food-placeholder-3.jpg" alt="Special Dish">
+            <p class="image-caption">Special Dish Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="food-placeholder-4.jpg" alt="Chef's Special">
+            <p class="image-caption">Chef's Special Coming Soon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="food-placeholder-5.jpg" alt="Signature Dish">
+            <p class="image-caption">Signature Dish Coming Soon</p>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+    <a href="https://www.instagram.com/aabaanrg73"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/995595125658"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:aabaangr@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+            <p>&copy; 2024 Journey to Culinary Excellence</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
