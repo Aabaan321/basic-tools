@@ -119,6 +119,55 @@
             text-align: left;
             border-bottom: 1px solid var(--text-secondary);
         }
+        /* Flip Cards (if not added already) */
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%; height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  background: var(--card-bg);
+}
+.flip-card-back {
+  background: var(--accent-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+.vehicle-image {
+  width: 100%; height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: var(--bg-secondary);
+}
+
     </style>
 </head>
 <body>
@@ -141,107 +190,99 @@
     </div>
 
     <div class="container">
-        <section id="supercars" class="section">
-            <h2><i class="fas fa-car-side"></i> Dream Supercars</h2>
-            <div class="vehicle-showcase">
-                <article class="vehicle-card">
-                    <img src="https://dmc.ag/wp-content/uploads/2019/07/CSM_3881-scaled.jpg" alt="Lamborghini Aventador" class="vehicle-image">
-                    <div class="vehicle-specs">
-                        <h3>Lamborghini Aventador SVJ</h3>
-                        <div class="spec-grid">
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>770 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-stopwatch"></i>
-                                <span>0-60: 2.8s</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-gauge-high"></i>
-                                <span>217 mph</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-engine"></i>
-                                <span>V12 Engine</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="vehicle-card">
-                    <img src="https://www.motortrend.com/uploads/2023/11/014-2024-ferrari-sf90-xx-stradale.jpg" alt="Ferrari SF90" class="vehicle-image">
-                    <div class="vehicle-specs">
-                        <h3>Ferrari SF90 Stradale</h3>
-                        <div class="spec-grid">
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>986 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-stopwatch"></i>
-                                <span>0-60: 2.5s</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-gauge-high"></i>
-                                <span>211 mph</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-plug"></i>
-                                <span>Hybrid</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+       
+      <section id="supercars" class="section">
+  <h2><i class="fas fa-car-side"></i> Dream Supercars</h2>
+  <div class="vehicle-showcase">
+    <!-- Lamborghini Aventador SVJ Flip Card -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://dmc.ag/wp-content/uploads/2019/07/CSM_3881-scaled.jpg" alt="Lamborghini Aventador SVJ" class="vehicle-image">
+          <h3>Lamborghini Aventador SVJ</h3>
+        </div>
+        <div class="flip-card-back">
+          <div class="spec-grid">
+            <div class="spec-item"><i class="fas fa-tachometer-alt"></i>770 HP</div>
+            <div class="spec-item">
+              <i class="fas fa-stopwatch"></i>0-60: 2.8s
             </div>
-        </section>
-
-        <section id="motorcycles" class="section">
-            <h2><i class="fas fa-motorcycle"></i> Dream Bikes</h2>
-            <div class="vehicle-showcase">
-                <article class="vehicle-card">
-                    <img src="https://preview.redd.it/new-2025-panigale-v4-s-v0-fffqq4z46qed1.jpeg?width=1080&crop=smart&auto=webp&s=5ef19cd9a47193a50ee89bf3da1f787cc5ba9311" alt="Ducati Panigale" class="vehicle-image">
-                    <div class="vehicle-specs">
-                        <h3>Ducati Panigale V4</h3>
-                        <div class="spec-grid">
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>214 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-weight-hanging"></i>
-                                <span>175 kg</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-gauge-high"></i>
-                                <span>186 mph</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="vehicle-card">
-                    <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/95229/left-side-view.jpeg?q=100" alt="BMW S1000RR" class="vehicle-image">
-                    <div class="vehicle-specs">
-                        <h3>Kawasaki Ninja H2R</h3>
-                        <div class="spec-grid">
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>310 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-weight-hanging"></i>
-                                <span>216 kg</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-gauge-high"></i>
-                                <span>240 mph</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <div class="spec-item">
+              <i class="fas fa-gauge-high"></i>217 mph
             </div>
-        </section>
+            <div class="spec-item">
+              <i class="fas fa-engine"></i>V12 Engine
+            </div>
+          </div>
+        </div>
+      <div class="flip-card-back">
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ferrari SF90 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://www.motortrend.com/uploads/2023/11/014-2024-ferrari-sf90-xx-stradale.jpg" alt="Ferrari SF90" class="vehicle-image">
+        <h3>Ferrari SF90 Stradale</h3>
+      </div>
+      <div class="flip-card-back">
+        <div class="spec-grid">
+          <div class="spec-item"><i class="fas fa-tachometer-alt"></i>986 HP</div>
+          <div class="spec-item"><i class="fas fa-stopwatch"></i>0-60: 2.5s</div>
+          <div class="spec-item"><i class="fas fa-gauge-high"></i>211 mph</div>
+          <div class="spec-item"><i class="fas fa-plug"></i>Hybrid</div>
+        </div>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dream Bikes Flip Cards -->
+<section id="motorcycles" class="section">
+  <h2><i class="fas fa-motorcycle"></i> Dream Bikes</h2>
+  <div class="vehicle-showcase">
+    <!-- Ducati Panigale V4 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://preview.redd.it/new-2025-panigale-v4-s-v0-fffqq4z46qed1.jpeg?width=1080&crop=smart&auto=webp&s=5ef19cd9a47193a50ee89bf3da1f787cc5ba9311" alt="Ducati Panigale V4" class="vehicle-image">
+          <h3>Ducati Panigale V4</h3>
+        </div>
+        <div class="flip-card-back">
+          <div class="spec-grid">
+            <div class="spec-item"><i class="fas fa-tachometer-alt"></i>214 HP</div>
+            <div class="spec-item"><i class="fas fa-weight-hanging"></i>175 kg</div>
+            <div class="spec-item"><i class="fas fa-gauge-high"></i>186 mph</div>
+          </div>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kawasaki Ninja H2R -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/95229/left-side-view.jpeg?q=100" alt="Kawasaki Ninja H2R" class="vehicle-image">
+          <h3>Kawasaki Ninja H2R</h3>
+        </div>
+        <div class="flip-card-back">
+          <div class="spec-grid">
+            <div class="spec-item"><i class="fas fa-tachometer-alt"></i>310 HP</div>
+            <div class="spec-item"><i class="fas fa-weight-hanging"></i>216 kg</div>
+            <div class="spec-item"><i class="fas fa-gauge-high"></i>240 mph</div>
+          </div>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <section id="events" class="section">
             <h2><i class="fas fa-flag-checkered"></i> Automotive Events</h2>
