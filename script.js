@@ -411,4 +411,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </script>
+// Preloader functionality
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  setTimeout(() => preloader.classList.add('hidden'), 500);
+});
+
+// Smooth Scrolling
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if(href.startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(href=this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+});
+
+// Navbar Hide on Scroll
+let lastScroll = window.scrollY;
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  lastScroll = currentScroll;
+});
+
+// Initialize AOS Animations
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({ duration: 800, once: true });
+});
 
